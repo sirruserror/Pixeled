@@ -26,10 +26,13 @@ Pixelled is a DOM parser and renderer for the CLI. It allows you to create a JSO
         "Color": "red"
     }
 ]
+```
+2.
 Make the executable:
 ```bash
 make
 ```
+3.
 Run the executable:
 ```bash
 ./dist/Pixeled/Pixeled path/to/your/file.json
