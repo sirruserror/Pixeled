@@ -7,3 +7,7 @@ out/
 .idea/
 *.o
 __pycache__
+test/
+build/
+dist/
+*.spec
