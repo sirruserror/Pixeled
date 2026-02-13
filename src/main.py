@@ -8,7 +8,7 @@ try:
     file_to_parse = sys.argv[1]
 except:
     print("fatal ERR! No file passed to execute")
-    quit(1)
+    sys.exit(1)
 
 with open(file_to_parse, 'r') as f:
     Nodes = jstt.JSON_to_tok(f.read())
