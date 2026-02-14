@@ -1,4 +1,4 @@
-import dom
+import dom, sys
 import nodes
 
 
@@ -17,5 +17,13 @@ def execute_dom(DOM:dom.DOM):
     textboxes = [node for node in DOM.Nodes if isinstance(node, nodes.TextBox)]
     textboxes.sort(key=lambda x: x.priority)
     
+    errorboxes = [node for node in DOM.Nodes if isinstance(node, nodes.ErrorBox)]
+    errorboxes.sort(key=lambda x: x.priority)
+    
     for node in textboxes:
         print(colors.get(node.Color, "") + node.Text + colors.get("white", ""))
+
+    for node in errorboxes:
+        sys.stderr.write(colors.get("red", "") + node.Text + colors.get("white", ""))
+        if node.endex == True:
+            sys.exit(node.ErrorCode)

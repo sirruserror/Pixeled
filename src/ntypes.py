@@ -12,3 +12,6 @@ class TextBox(NodeType):
     def __init__(self):
         super().__init__("TextBox")
     
+class ErrorBox(NodeType):
+    def __init__(self):
+        super().__init__("ErrorBox")
