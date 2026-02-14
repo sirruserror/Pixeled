@@ -35,7 +35,7 @@ make
 3.
 Run the executable:
 ```bash
-./dist/Pixeled/Pixeled path/to/your/file.json
+./dist/Pixeled/Pixeled path/to/your/file.json -d # -d is for debug mode, it will print ALOT of information
 ```
 
 ### Contributing
