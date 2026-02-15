@@ -1,8 +1,11 @@
 import dom as dom
 import nodes as nodes
 import ntypes as ntypes
+import time
 import execu as execu
 import jstt, sys
+
+start_time = time.time()
 
 if "-d" in sys.argv or "--debug" in sys.argv:
     debug = True
@@ -30,4 +33,6 @@ if debug:
         print("DEBUG: Executing DOM..")
 execu.execute_dom(DOM=DOM, debug=debug)
 if debug:
+        end_time = time.time()
+        print(f"Execution completed in {end_time - start_time:0.4f} seconds")
         print("DEBUG: DOM Executed")
